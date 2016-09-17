@@ -1,0 +1,19 @@
+Oh my god, I forgot how to GIT. My github username was set to something utterly random. I had to change my configs first.
+
+It took me about thirty mintues to set the whole thing up. WTH... I created the repo in github, next I had to create a branch locally on my Mac and I thought it should be done with $> git remote add. But NOOOOO, some configs changed, I had to set it to simple. That's on me, for not following what's happening in the non-Google world. Next thing is that I am not given access to push to my own repo!
+
+This is heavily embarassing. It took me a whole thirty minutes to do a simple git push :( Well, it's working now, and after setting the upstream (finally) it worked for me.
+
+Root of the problem: My fucking keychain was supplying creds when it shouldn't have. :/ Thankfully, someone in the internet experienced and was grateful for exposing this in Stack Overflow. At this point, I'd have given up, thank god for Eminem in the background.
+
+git lfs
+
+Huh, didn;t know git had a new functionality to store large files!
+
+du -h Who knew about that little fella
+
+brew update needed before getting git lfs to work
+
+SPent an hour or so to get git's lfs to work :( I still have no idea what I did wrong.
+
+Screw this, .gitignore to the rescue.

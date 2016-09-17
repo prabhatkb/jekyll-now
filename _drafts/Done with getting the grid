@@ -1,0 +1,29 @@
+Step 1: Get the grid size.
+
+I came across a guy who already used OpenCV to identify grids in a Sudoku puzzle. Nice guy. I'll take it!
+
+Aana enna pannraan ne puriyala. Never took a basic course on Image Processing and this article goes on and on about thresholding, Hough Transform. Well, there is no other way I guess. A nice article, converting points from XY space to MC space and using their intersection to find the line.
+
+Getting a little bit complicated. Is there a sample app that I can piggyback on. OpenCV tutorials.
+
+
+Firstly, I'd need the size. I can use the corner point method to get the corners...
+
+Ennada ivan HoughLines nu sollraan, Cany edge detector nu sollraen. I have no idea what the hell these things actually do.
+
+http://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html
+
+Looked at the sample over there.
+
+Shit loads of lines. ~1600ish lines....
+
+Wait, why am I getting diaganol lines. This is a pure moment of joy. What the hell is this theta variable. Let's see what happens when I set it to 90 degrees. Booyah!!!! Now to weed out these dum fucking short lines.......
+
+And then it strikes. The other HoughLines function. One particular parameter actually. the maxLineGap... I know how big the image is going to be.... Safe to assume that 1/2 of the whole image width should be used to contruct a line. Sure, it may not be most optimal way, but who the hell cares... * breaks knuckles *
+
+This keeps exciting me.... Almost nailed them all.... Hmm still sone fucking diagnol lines exist... What the fuck is wrong with me.... It's basic coordinate geometry... Calculate all slopes for those lines and if any are more than +- 5 or 90+-5, fucking filter them!!!
+
+I still see fucking small lines even after explicitly defining the.... you know what.. it's alright... I know math and how to calculate the distance between two points.... Phew... I'll just fucking manually remove them :)... Still not working... Fuck me, points vs pixels...
+
+
+YESSS!!!!! Finally done.... Next step would be to get the digits from the crossword :)

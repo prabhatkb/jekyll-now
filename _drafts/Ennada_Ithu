@@ -1,0 +1,120 @@
+Installing cocoa pods, fucker just said, add this line to the PodFile
+
+had to do first pod init, then it creates a PodFile, add the target, use the .xcworkspace and not the projfile
+
+and now openCV2 starting crying
+
+Apparently, I need AVFoundation
+
+I got stuck, the tesseract iamge reader is absolute shit, it only recognizes three and 1 :(
+
+Try scaling to 300DPI, didn't work
+
+Installing the command line utility to check if I can do a lot better. So esentially, the quality is too bad fo the OCR to work properly.
+
+How to improve the image quality?
+
+Screw it, an average image from an iPhone is more than strong enough than whatever I'm borrowing from the internet. This works!
+tesseract.engineMode = G8OCREngineModeTesseractCubeCombined;
+tesseract.maximumRecognitionTime = 60.0;
+tesseract.pageSegmentationMode = G8PageSegmentationModeSparseText; to G8PageSegmentationModeSingleColumn works even better.
+
+Border is such a fucking issue. Manually come up with a custom one and viola, 14 is extracted correctly!!!
+
+
+Extending the same logic to every single grid in the crosword. First check if the grid is black, luckily someone on Stack FOverflow had something similar. Copy paste and extend it for white squares tooo, and you have it. And the digits are calculated as well!!! Nice!!
+
+---------------------------------------
+|1 |2 |3 |4 |--|5 |3 |7 |3 |9 |--|  |11|12|  |
+---------------------------------------
+|14|  |  |  |--|15|  |  |  |  |--|  |  |  |  |
+---------------------------------------
+|17|  |  |  |18|  |  |  |  |  |  |  |  |  |  |
+---------------------------------------
+|20|  |  |--|21|  |  |--|22|  |  |  |  |  |  |
+---------------------------------------
+|23|  |  |24|  |  |--|25|  |  |  |  |--|--|--|
+---------------------------------------
+|--|--|26|  |  |--|27|  |  |--|28|  |29|30|51|
+---------------------------------------
+|32|33|  |  |--|34|  |  |  |35|  |  |  |  |  |
+---------------------------------------
+|36|  |  |--|37|  |  |  |  |  |  |--|38|  |  |
+---------------------------------------
+|39|  |  |40|  |  |  |  |  |  |--|11|  |  |  |
+---------------------------------------
+|42|  |  |  |  |--|43|  |  |--|14|  |  |--|--|
+---------------------------------------
+|--|--|--|45|  |46|  |  |--|47|  |  |  |18|19|
+---------------------------------------
+|50|51|52|  |  |  |  |--|33|  |  |--|54|  |  |
+---------------------------------------
+|513|  |  |  |  |  |  |36|  |  |  |32|  |  |  |
+---------------------------------------
+|56|  |  |  |--|39|  |  |  |  |--|50|  |  |  |
+---------------------------------------
+|61|  |  |  |--|52|  |  |  |  |--|515|  |  |  |
+
+I still some errors in the picture... Some of them:
+
+5 sometimes gets red as 3, 8 gets read as 3, and for some wierd reason 61 is 515 :|
+56 is actually 58, 55 became 513
+
+
+---------------------------------------
+|1 |2 |3 |4 |--|5 |6 |7 |8 |9 |--|10|11|12|13|
+---------------------------------------
+|14|  |  |  |--|15|  |  |  |  |--|16|  |  |  |
+---------------------------------------
+|17|  |  |  |18|  |  |  |  |  |19|  |  |  |  |
+---------------------------------------
+|20|  |  |--|21|  |  |--|22|  |  |  |  |  |  |
+---------------------------------------
+|23|  |  |24|  |  |--|25|  |  |  |  |--|--|--|
+---------------------------------------
+|--|--|26|  |  |--|27|  |  |--|28|  |29|30|31|
+---------------------------------------
+|32|33|  |  |--|34|  |  |  |35|  |  |  |  |  |
+---------------------------------------
+|36|  |  |--|37|  |  |  |  |  |  |--|38|  |  |
+---------------------------------------
+|39|  |  |40|  |  |  |  |  |  |--|41|  |  |  |
+---------------------------------------
+|42|  |  |  |  |--|43|  |  |--|44|  |  |--|--|
+---------------------------------------
+|--|--|--|413|  |46|  |  |--|42|  |  |  |45|519|
+---------------------------------------
+|50|51|52|  |  |  |  |--|315|  |  |--|34|  |  |
+---------------------------------------
+|30|  |  |  |  |  |  |36|  |  |  |31|  |  |  |
+---------------------------------------
+|36|  |  |  |--|9 |  |  |  |  |--|30|  |  |  |
+---------------------------------------
+|1 |  |  |  |--|2 |  |  |  |  |--|36|  |  |  |
+
+
+Setting hte leeway to x + imagegridwidth/10, I got the first 10 rows correct, and then thigns start to go down :(
+
+2016-09-04 23:06:29.596 CrosswordSolver[41072:838632] (
+    "(68.58%) '3'",
+    "(67.14%) '1'",
+    "(74.89%) '5'"
+)
+2016-09-04 23:06:29.596 CrosswordSolver[41072:838632] (
+    "(67.14%) '315\n\n'"
+)
+2016-09-04 23:06:29.597 CrosswordSolver[41072:838632] (
+        (
+        "(68.58%) '3'"
+    ),
+        (
+        "(67.14%) '1'"
+    ),
+        (
+        "(74.89%) '5'"
+    )
+)
+
+So 53 is being recognized as 5, 1 and 3.
+
+The answer was all along in the debug logs. Get the recognizedBlocksByIteratorLevel, it has confidence intervals for it. If it's not +90, re-do it, with different frame rects!!!!

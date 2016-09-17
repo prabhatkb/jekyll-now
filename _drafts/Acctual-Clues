@@ -1,0 +1,42 @@
+1 Repair shop supply
+
+6 Sicilian wine
+13 Deli device
+19 Paragon
+20 Youre - you feel
+21 "O 7 pretty maiden, . . .’
+22 Whirlpool inventor
+25 About time!
+26 Isolde's beloved
+27 School topic (abbr.)
+28 Previously
+30 Sprechen 7 Deutsch?
+32 Edible tuber
+34 Be dependent, in a way
+37 Like Burns' mouse
+40 Microphone inventor
+44 "My Way" composer
+45 " to bed": Pepys
+47 Gross minus expenses
+48 Tram filler
+49 Highway of the North
+50 Bait
+51 Tijuana title
+54 Brother of Moses
+57 Watchdog org.
+58 Self-evident fact
+60 Synthesizer inventor
+62 Again, to Masur
+63 Ballad
+64 Approves
+66 Actor's award
+67 "Gilmore Girls" Bledel
+
+for crossword_across_1.jpg
+
+
+Since, they are all seperated by new line, skip the initial whitespace.
+	If the first char is a digit, that's a new Clue.
+	If the first char is a letter, it's a continuation.
+
+Extract the actual clues from there, define a little Clue class for a little encapsulation.

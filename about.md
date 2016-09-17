@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I'm a Software Engineer at Google. Aside from work, I like to play video games, swim in the SF Bay, visiting coffee shops and write this blog!
 
-### More Information
+### Contact
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+[prabhat.bharathi@gmail.com](mailto:prabhat.bharathi@gmail.com)
