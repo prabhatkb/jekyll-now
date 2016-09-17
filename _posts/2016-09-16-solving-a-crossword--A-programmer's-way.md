@@ -5,9 +5,7 @@ date:   2016-09-02 21:30:46 -0700
 ---
 
 ## **Inspiration:**
-### I have nothing better to do in life. So, I might as well!
-
-Truer words have never been ~~spoken~~ typed. I've always loved solving puzzles. They're a fun way to pass the time. But crosswords are always something that I steered away from. **Why?**
+I have nothing better to do in life. So, I might as well! Truer words have never been ~~spoken~~ typed. I've always loved solving puzzles. They're a fun way to pass the time. But crosswords are always something that I steered away from. **Why?**
 
 **1 Across: "Fried Green Tomatoes" scripwriter Fannie** - What the actual shit.
 
@@ -15,11 +13,11 @@ Truer words have never been ~~spoken~~ typed. I've always loved solving puzzles.
 
 **17 Down: Half a rack.** Wait, half a what??? Oh... racks... Internet has taken away my innocense.
 
-**24 Down: Gladiator's weapon.** 5 letters? Haha, I got one. Sword. Wait, it could be a Spear. Meh, Spear is unlikely. Have you ever seen a gladiator with a spear? Wait, could this be a word in Latin? I'll pissed as hell if the answer was in Latin. Fuck this shit, I'm out.
+**24 Down: Gladiator's weapon.** 5 letters? Haha, I got one. Sword. Wait, it could be a Spear. Meh, Spear is unlikely. Have I ever seen a gladiator with a spear? Wait, could this be a word in Latin? I'll pissed as hell if the answer was in Latin. Fuck this shit, I'm out.
 
-I suck at it, **_that's why_**. English (or in some cases Latin) is not my native language. There's no way I can understand the underlying subtle nuances in a crossword clue and figure out the damn word. Hell, I'd bet that I wouldn't even know more than half the words in the solution. So, I decided to stick to my strengths, PROGRAMMING.
+I suck at croswords, **_that's why_**. English (or in some cases Latin) is not my native language. There's no way I can understand the underlying subtle nuances in a crossword clue and figure out the damn word. Hell, I'd bet that I wouldn't even know more than half the words in the solution. So, I decided to stick to my strengths, PROGRAMMING.
 
-![Batman Facepalm](../../../resources/batman_facepalm.jpg)![Gandalf Facepalm](../../../resources/gandalf_facepalm.jpg)![Picard Facepalm](../../../resources/picard_facepalm.jpg)![Joker WTF](../../../resources/joker_wtf.jpg)
+![Batman Facepalm](../../../resources/batman_facepalm.jpg)![Gandalf Facepalm](../../../resources/gandalf_facepalm.jpg)![Crowd Facepalm](../../../resources/crowd_facepalm.jpg)![Joker WTF](../../../resources/joker_wtf.jpg)
 <br/>
 <br/>
 YEP, that's what I'm gonna do. I'm gonna build myself an iPhone app that can take a picture of a crossword and solve it for me.
