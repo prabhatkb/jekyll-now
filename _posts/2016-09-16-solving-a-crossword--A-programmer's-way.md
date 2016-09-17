@@ -19,7 +19,7 @@ Truer words have never been ~~spoken~~ typed. I've always loved solving puzzles.
 
 I suck at it, **_that's why_**. English (or in some cases Latin) is not my native language. There's no way I can understand the underlying subtle nuances in a crossword clue and figure out the damn word. Hell, I'd bet that I wouldn't even know more than half the words in the solution. So, I decided to stick to my strengths, PROGRAMMING.
 
-![Batman Facepalm](../../../resources/batman_facepalm.jpg)![Gandalf Facepalm](../../../resources/gandalf_facepalm.jpg)![Crowd Facepalm](../../../resources/crowd_facepalm.jpg)![Joker WTF](../../../resources/joker_wtf.jpg)
+![Batman Facepalm](../../../resources/batman_facepalm.jpg)![Gandalf Facepalm](../../../resources/gandalf_facepalm.jpg)![Picard Facepalm](../../../resources/picard_facepalm.jpg)![Joker WTF](../../../resources/joker_wtf.jpg)
 <br/>
 <br/>
 YEP, that's what I'm gonna do. I'm gonna build myself an iPhone app that can take a picture of a crossword and solve it for me.
