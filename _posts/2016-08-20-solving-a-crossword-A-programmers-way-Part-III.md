@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "How to solve a crossword! - Part III"
+date:   2016-09-02 21:30:46 -0700
+---
+
+Step 1: Get the grid size.
+
+I started with a sample picture I got off the internet.
+
+I came across a guy who already used OpenCV to identify grids in a Sudoku puzzle. Nice guy. I'll take it!
+
+Aana enna pannraan ne puriyala. Never took a basic course on Image Processing and this article goes on and on about thresholding, Hough Transform. Well, there is no other way I guess. A nice article, converting points from XY space to MC space and using their intersection to find the line.
+
+Getting a little bit complicated. Is there a sample app that I can piggyback on. OpenCV tutorials.
+
+Firstly, I'd need the size. I can use the corner point method to get the corners...
+
+Ennada ivan HoughLines nu sollraan, Cany edge detector nu sollraen. I have no idea what the hell these things actually do.
+
+http://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/hough_lines/hough_lines.html
+
+Looked at the sample over there.
+
+Shit loads of lines. ~1600ish lines....
+
+Wait, why am I getting diaganol lines. This is a pure moment of joy. What the hell is this theta variable. Let's see what happens when I set it to 90 degrees. Booyah!!!! Now to weed out these dum fucking short lines.......
+
+And then it strikes. The other HoughLines function. One particular parameter actually. the maxLineGap... I know how big the image is going to be.... Safe to assume that 1/2 of the whole image width should be used to contruct a line. Sure, it may not be most optimal way, but who the hell cares... * breaks knuckles *
+
+This keeps exciting me.... Almost nailed them all.... Hmm still sone fucking diagnol lines exist... What the fuck is wrong with me.... It's basic coordinate geometry... Calculate all slopes for those lines and if any are more than +- 5 or 90+-5, fucking filter them!!!
+
+I still see fucking small lines even after explicitly defining the.... you know what.. it's alright... I know math and how to calculate the distance between two points.... Phew... I'll just fucking manually remove them :)... Still not working... Fuck me, points vs pixels...
+
+
+YESSS!!!!! Finally done.... Next step would be to get the digits from the crossword :)
+
+Still lines kinda add thickness to it.... Hmmm... Okay brute force this shit. Ain't nobody got time for that. Pro tip: Crosswords are symmetrical :|
+
+Here's what I'm gonna do. Get the lowest X,Y coordinate and get the highest X,Y. Go from the smallest X0 that you can find and make sure that there is a line at each increasing increment.
+
+Doesn't work as they numbers aren't exact... I do have the number of intersections though....
+
+Implemented a thickness filter.
+
+Start a set with one line. Add a line iff there are no lines that are closer to any line in the existing set.
+
+Got the entire grid.... Now onward to using Tesseract!!!
+
+Identify boudnary conditions. Lowest point should be such that, x+y should be the smallest. Similar for x+y.
+
+Still lines kinda add thickness to it.... Hmmm... Okay brute force this shit. Ain't nobody got time for that. Pro tip: Crosswords are symmetrical :|
+
+Here's what I'm gonna do. Get the lowest X,Y coordinate and get the highest X,Y. Go from the smallest X0 that you can find and make sure that there is a line at each increasing increment.
+
+Doesn't work as they numbers aren't exact... I do have the number of intersections though....
+
+Implemented a thickness filter.
+
+Start a set with one line. Add a line iff there are no lines that are closer to any line in the existing set.
+
+Got the entire grid.... Now onward to using Tesseract!!!
+
+Identify boudnary conditions. Lowest point should be such that, x+y should be the smallest. Similar for x+y.
