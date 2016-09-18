@@ -27,3 +27,17 @@ I still see fucking small lines even after explicitly defining the.... you know 
 
 
 YESSS!!!!! Finally done.... Next step would be to get the digits from the crossword :)
+
+Still lines kinda add thickness to it.... Hmmm... Okay brute force this shit. Ain't nobody got time for that. Pro tip: Crosswords are symmetrical :|
+
+Here's what I'm gonna do. Get the lowest X,Y coordinate and get the highest X,Y. Go from the smallest X0 that you can find and make sure that there is a line at each increasing increment.
+
+Doesn't work as they numbers aren't exact... I do have the number of intersections though....
+
+Implemented a thickness filter.
+
+Start a set with one line. Add a line iff there are no lines that are closer to any line in the existing set.
+
+Got the entire grid.... Now onward to using Tesseract!!!
+
+Identify boudnary conditions. Lowest point should be such that, x+y should be the smallest. Similar for x+y.
