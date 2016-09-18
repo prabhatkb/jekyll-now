@@ -16,22 +16,23 @@ Any programmer worth his salt, knows how to Git. It is so common a skill, that I
 <div style="text-align:center"><img src ="../../../resources/hades_timeout.jpg" /></div>
 <br/>
 
-Turns out I already have another github account already initlialized in my Mac. I don't even remember when I did that! 
+Turns out I already have another github account already initlialized in my Mac. I don't even remember when I did that! Anyway, I fixed the configs and tried again. 
 
-<br/>
-Anyway, I fixed the configs and tried again. Another Fail! It seems Git has changed since I last used it. Git's default push configurations are [different from before](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0) and I had to go back and edit my configs. This one's on me for completely slacking off and not following up on what's happening in the outside world.
+It failed again! It seems Git has changed since I last used it. Git's default push configurations are [different from before](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0) and I had to go back and edit my configs. This one's on me for completely slacking off and not following up on what's happening in the outside world.
 
 <br/>
 <div style="text-align:center"><img src ="../../../resources/hades_slacking.jpg" /></div>
 <br/>
 
-Let's try again now. Spectacular Fail!!! *I dont' have access to push to my own repo* Wait, what?
+Anyway, edited the push configurations appropriately and tried again.
+
+A spectacular Fail!!! *I dont' have access to push to my own repo*. Wait, what?
 
 <br/>
 <div style="text-align:center"><img src ="../../../resources/hades_i_own_you.jpg" /></div>
 <br/>
 
-Root of the problem: My fucking keychain was supplying outdated credentials. Thankfully, someone in the internet experienced the same and listed a solution in Stack Overflow. Thank god for 8 Mile and Eminem in the background, or I'd quit at this point. So after purging everything in my keychain, I tried again.
+Root of the problem: My keychain was supplying outdated credentials. Thankfully, someone in the internet experienced the same and listed a solution in Stack Overflow. Thank god for 8 Mile and Eminem in the background, or I'd quit at this point. So after purging everything in my keychain, I tried again.
 
 Yep, it failed.
 
